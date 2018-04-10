@@ -48,9 +48,9 @@ public class EmployeeController {
 		if(DesignationValidator.validate(emp, employeeService, designationService)) {
 			employeeService.saveUser(emp);
 			LOGGER.info("after save");
-        	HttpHeaders headers = new HttpHeaders();
-            headers.setLocation(builder.path("/v1/employees/{id}").buildAndExpand(emp.getEmpid()).toUri());
-            return new ResponseEntity<EmployeeEntity>(headers, HttpStatus.CREATED);	
+        		HttpHeaders headers = new HttpHeaders();
+            		headers.setLocation(builder.path("/v1/employees/{id}").buildAndExpand(emp.getEmpid()).toUri());
+            		return new ResponseEntity<EmployeeEntity>(headers, HttpStatus.CREATED);	
 		} else {
 			return new ResponseEntity<EmployeeEntity>(HttpStatus.CONFLICT);
 		}

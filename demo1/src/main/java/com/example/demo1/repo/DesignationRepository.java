@@ -13,6 +13,6 @@ import com.example.demo1.entity.EmployeeEntity;
 @Repository
 public interface DesignationRepository extends CrudRepository<DesignationEntity, Long> {
 	
-	//@Query(nativeQuery = true, value="select  empid,empname, mgrid from emp where empid = :empid ")
+	//@Query(nativeQuery = true, value="select  desigid, designation, parentdesigid from desig where desigid = :desigid ")
     //public List<DesignationEntity> findByDesigId(@Param("desigid") Long desigid);
 }
